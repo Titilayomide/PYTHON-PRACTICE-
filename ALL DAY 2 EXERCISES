@@ -1,0 +1,124 @@
+TOPIC : Understanding Data Types and How to Manipulate Strings
+
+LESSON 5 DAY 2 - DATA TYPES
+Instructions
+Write a program that adds the digits in a 2 digit number. e.g. if the input was 35, then the output should be 3 + 5 = 8
+Warning. Do not change the code on line 1. Your program should work for different inputs. e.g. any two-digit number.
+The last line of your program should print the result.
+Example 1 Input
+39
+Example 1 Output
+12
+Example 2 Input
+43
+Example 2 Output
+7
+
+SOLUTION: 
+two_digit_number = input()
+# 🚨 Don't change the code above 👆
+####################################
+# Write your code below this line 👇
+# print(type(two_digit_number))
+first_digit = int(two_digit_number[0])
+second_digit = int(two_digit_number[1])
+print(first_digit + second_digit)
+
+
+LESSON 6 DAY 2 - BMI CALCULATOR
+Instructions
+Write a program that calculates the Body Mass Index (BMI) from a user's weight and height.
+BMI Wikipedia Page
+The BMI is a measure of someone's weight taking into account their height. e.g. If a tall person and a short person both weigh the same amount, the short person is usually more overweight.
+The BMI is calculated by dividing a person's weight (in kg) by the square of their height (in m):
+NOTE: You should convert the bmi to a whole number and print out a whole number in order to pass all the tests. See examples below.
+Example Input 1
+1.75
+80
+means: weight = 80 and height = 1.75
+Example Output 1
+26
+Since: 80 ÷ (1.75 x 1.75) = 26.122448979591837
+Example Input 2
+1.58
+57
+Example Output 1
+22
+0:18
+
+SOLUTION: 
+# 1st input: enter height in meters e.g: 1.65
+height = input()
+# 2nd input: enter weight in kilograms e.g: 72
+weight = input()
+# 🚨 Don't change the code above 👆
+
+# Write your code below this line 👇
+# check type of input
+  # print(type(height))
+  # print(type(weight))
+BMI = int(weight) / (float(height) ** 2)
+# print(BMI)
+# # what is the data type of BMI
+# print(type(BMI))
+# convert float to int
+print(int(BMI))
+
+
+LESSON 7 DAY 2 - LIFE IN WEEKS
+
+Instructions
+I was reading this article by Tim Urban - Your Life in Weeks and realised just how little time we actually have.
+Create a program using maths and f-Strings that tells us how many weeks we have left, if we live until 90 years old.
+It will take your current age as the input and output a message with our time left in this format:
+You have x weeks left.
+Where x is replaced with the actual calculated number of weeks the input age has left until age 90.
+Warning your output should match the Example Output format exactly, even the positions of the commas and full stops.
+
+Example Input
+56
+Example Output
+You have 1768 weeks left.
+
+SOLUTION:
+age = input()
+# 🚨 Don't change the code above 👆
+# Write your code below this line 👇
+# Method 1:
+# Convert age input to integer
+int_age = int(age)
+# Calculate years left: substract 90 - number of year int
+remaining_year = 90 - int_age
+# print(remaining_year)
+# Calculate months left: remaining_year * 12
+remaining_month = remaining_year * 12
+# print(remaining_month)
+
+# Calculate weeks left: remaining_year * 52
+remaining_weeks = remaining_year * 52
+# print(remaining_weeks)
+
+# Calculate days left: remaining_year * 365
+# remaining_days = remaining_year * 365
+# print(remaining_days)
+print(f"You have {remaining_weeks} weeks left.")
+
+Day 2 Project: Tip Calculator
+
+#If the bill was $150.00, split between 5 people, with 12% tip. 
+print("welcome to the tip calculator!")
+bill = float(input("what was the total bill? $"))
+tip = int(input("how much tip would you like to give? 10, 12, or 15?"))
+people = int(input("how many people to split the bill?"))
+
+#Each person should pay (150.00 / 5) * 1.12 = 33.6
+tip_as_percent = tip / 100
+
+#Format the result to 2 decimal places = 33.60
+total_tip_amount = bill * tip_as_percent
+total_bill = bill + total_tip_amount
+bill_per_person = total_bill / people
+final_amount = round(bill_per_person, 2)
+
+#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+print(round(final_amount))
