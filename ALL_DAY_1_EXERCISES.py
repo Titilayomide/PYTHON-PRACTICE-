@@ -1,10 +1,10 @@
-LESSON 1 DAY 1 - PRINTING
+#LESSON 1 DAY 1 - PRINTING
 print('A "single quote" inside a double quote')
 print('A "double quote" inside a single quote')
 print("Alternatively you can just \"escape\" the quote")
 
 
-LESSON 2 DAY 1 - DEBUGGING PRACTICE
+#LESSON 2 DAY 1 - DEBUGGING PRACTICE
 
 print("Day 1 - String Manipulation")
 print('String Concatenation is done with the "+" sign.')
