@@ -1,0 +1,47 @@
+FUNCTIONS WITH INPUTS
+#Simple Function
+def greet():
+  print("Hello Angela")
+  print("How do you do Jack Bauer?")
+  print("Isn't the weather nice today?")
+greet()
+
+#Function that allows for input
+#'name' is the parameter.
+#'Jack Bauer' is the argument.
+def greet_with_name(name):
+  print(f"Hello {name}")
+  print(f"How do you do {name}?")
+greet_with_name("Jack Bauer")
+
+#Functions with more than 1 input
+def greet_with(name, location):
+  print(f"Hello {name}")
+  print(f"What is it like in {location}?")
+
+#Calling greet_with() with Positional Arguments
+greet_with("Jack Bauer", "Nowhere")
+#vs.
+greet_with("Nowhere", "Jack Bauer")
+
+
+#Calling greet_with() with Keyword Arguments
+greet_with(location="London", name="Angela")
+
+LESSON 20 DAY 8 - PAINT AREA CALCULATOR
+# Write your code below this line 👇
+import math
+test_h = int(input()) # Height of wall (m)
+test_w = int(input()) # Width of wall (m)
+coverage = int(5)
+  
+# Write your code above this line 👆
+# Define a function called paint_calc() so the code below works.   
+def paint_calc(height=test_h, width=test_w, cover=coverage):
+# 🚨 Don't change the code below 👇
+  area = test_h * test_w
+  paint_calc = area / cover
+  round_calc = math.ceil(paint_calc)
+  print(f"You'll need {round_calc} cans of paint.")
+
+paint_calc()
