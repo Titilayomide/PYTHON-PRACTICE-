@@ -1,3 +1,25 @@
+LESSON 22 DAY 9 - GRADING PROGRAM
+# TODO-1: Create an empty dictionary called student_grades.
+# student_record = {"Harry": 81,"Ron": 78,"Hermione": 99,"Draco": 74,"Neville": 62}
+student_grade = {}
+for students in student_scores:
+  score = student_scores[students]
+  if score > 90:
+    student_grades[students]= "Outstanding"
+  elif score > 80:
+    student_grades[students] = "Exceeds Expectations"
+  elif score > 70:
+    student_grades[students] = "Acceptable"
+  else:
+    student_grades[students] = "Fail"
+    
+# 🚨 Don't change the code below 👇
+print(student_grades)
+
+
+
+
+
 LESSON 23 DAY 9 - DICTIONARY IN LIST
 country = input() # Add country name
 visits = int(input()) # Number of visits
